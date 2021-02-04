@@ -1,0 +1,42 @@
+@import 'src/Style/MainVar.sass'
+
+.LinksContainer
+  float: left
+  display: flex
+  flex-direction: column
+  width: 45px
+  margin-right: 40px
+  a
+    margin-bottom: 4px
+  img
+    width: 30px
+    height: 30px
+    filter: invert($invert-icons)
+    transition: .2s
+    &:hover
+      margin-left: 5px
+
+.activeImg
+  transition: 0s
+  @media screen and (min-width: 950px)
+    animation: rotate3d 5s linear
+
+@keyframes rotate3d
+  from
+    transform: rotate3d(0, 1, 0, 0)
+
+  50%
+    transform: rotate3d(0, 1, 0, 180deg)
+
+  to
+    transform: rotate3d(0, 1, 0, 360deg)
+
+@media screen and (max-width: 950px)
+  .LinksContainer
+    width: 34px
+    margin: 0 0 -100px 0
+    flex-direction: column-reverse
+
+    transform: rotate(90deg)
+    img
+      transform: rotate(-90deg)
