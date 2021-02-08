@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { UpdateImgs } from 'src/Store/Actions/UpdateImgsAction';
 
 const UpdateImgsFunc: React.FC = (props) => {
-  fetch('https://www.instagram.com/jewelry_ranch/?__a=1', {
+  fetch('https://www.instagram.com/just_jewelry_krd/?__a=1', {
     method: 'GET',
   })
     .then((response) => response.json())

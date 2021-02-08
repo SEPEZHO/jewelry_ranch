@@ -1,23 +1,19 @@
 import React, {useEffect, useState} from 'react';
 
-import SrcGithub from 'src/Static/Img/Icons/Sidebar/GitHub.png';
-import SrcStackOverflow from 'src/Static/Img/Icons/Sidebar/StackOverflow.png';
-import Codewars from 'src/Static/Img/Icons/Sidebar/Codewars.png';
 import SrcTelegram from 'src/Static/Img/Icons/Sidebar/Telegram.png';
 import SrcVk from 'src/Static/Img/Icons/Sidebar/Vk.png';
 import SrcInst from 'src/Static/Img/Icons/Sidebar/Inst.png';
-import SrcYouTube from 'src/Static/Img/Icons/Sidebar/YouTube.png';
+import WhatsApp from 'src/Static/Img/Icons/Sidebar/WhatsApp.png';
+import SrcGmail from 'src/Static/Img/Icons/Sidebar/Gmail.png';
 
 import s from './Style/Links.module.sass';
 
 const items = [
-  {href: 'https://t.me/sepezho_log', src: SrcTelegram, isActive: false},
-  {href: 'https://www.instagram.com/sepezho', src: SrcInst, isActive: false},
+  {href: 'https://www.instagram.com/just_jewelry_krd', src: SrcInst, isActive: false},
+  {href: 'mailto:just.jewelry.krd@gmail.com', src: SrcGmail, isActive: false},
+  {href: 'https://t.me/sepezho', src: SrcTelegram, isActive: false},
+  {href: 'https://wa.me/89384087858', src: WhatsApp, isActive: false},
   {href: 'https://vk.com/sepezho', src: SrcVk, isActive: false},
-  {href: 'https://www.youtube.com/channel/UC4nIyTlfA6DKuF_xKtefutQ', src: SrcYouTube, isActive: false},
-  {href: 'https://github.com/SEPEZHO', src: SrcGithub, isActive: false},
-  {href: 'https://stackoverflow.com/users/12073046/sepezho', src: SrcStackOverflow, isActive: false},
-  {href: 'https://www.codewars.com/users/sepezho', src: Codewars, isActive: false},
 ];
 
 const Links = () => {

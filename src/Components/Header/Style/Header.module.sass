@@ -4,7 +4,7 @@ a
   text-decoration: none
 
 .root
-  width: 350px
+  width: 500px
   margin: auto
   margin-top: 50px
 
@@ -47,16 +47,23 @@ a
 .title
   color: $primary-color
   font-family: 'Gilroy BlackItalic'
-  font-size: xx-large
+  font-size: x-large
+  margin: 0 20px 0 15px
 
 .subTitle
   color: $header-status-color
   font-family: 'Gilroy ThinItalic'
-  margin: -5px 0 0 70px
+  margin: 0 20px 0 15px
+  font-size: small
 
 
-@media screen and (max-width: 450px)
+@media screen and (max-width: 550px)
   .root
     width: 100vw
   .container
     border-radius: 0
+
+@media screen and (max-width: 550px)
+  .container
+    flex-direction: column
+    padding-top: 20px 

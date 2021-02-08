@@ -6,7 +6,7 @@ import Tilt from 'src/Logics/Tilt.tsx';
 import Waiting from 'src/Static/Img/Icons/Slider/Waiting.svg';
 import Heart from 'src/Static/Img/Icons/Slider/Heart.svg';
 import Comments from 'src/Static/Img/Icons/Slider/Comments.svg';
-import File from 'src/Static/Img/Icons/Slider/File.svg';
+// import File from 'src/Static/Img/Icons/Slider/File.svg';
 import Calendar from 'src/Static/Img/Icons/Slider/Calendar.svg';
 import useResponsive from 'src/Logics/responsive'
 
@@ -50,13 +50,12 @@ const SliderModule: React.FC = (props) => {
                     {img.edge_media_to_comment.count}
                   </span>
                 </div>
-                <div className={s.SliderNote}>
+                {/* <div className={s.SliderNote}>
                   <img src={File} alt="" />
                   <span>
-                    {/*AND HERE*/}
                     {img.edge_media_to_caption.edges[0]?.node.text ? img.edge_media_to_caption.edges[0]?.node.text.length >= 70 ? `${img.edge_media_to_caption.edges[0]?.node.text.slice(0, 70)}...` : img.edge_media_to_caption.edges[0]?.node.text : 'Unfound note'}
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -73,7 +72,7 @@ const SliderModule: React.FC = (props) => {
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>
         {/* {props.imgs.username.toUpperCase()} */}
-        JEWELRY_RANCH
+        JUST_JEWELRY_KRD
       </div>
 
       {useResponsive('(min-width: 950px)', true) ? <Tilt children={<FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />} /> : <FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />}

@@ -12,7 +12,7 @@ module.exports = {
     poll: 1000 // Check for changes every second
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.ttf', '.sass', '.jpg'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.ttf', '.sass'],
     alias: {
       src: path.resolve(__dirname, 'src/')
     }

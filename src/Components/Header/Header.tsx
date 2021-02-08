@@ -14,8 +14,8 @@ const Header: React.FC = (props) => {
             {props.profile_pic_url ? <div><img src={props.profile_pic_url} className={`${s.avatar} rotateItem`} alt="" /></div> : <img src={Waiting} className={s.waiting} alt="" />}
           </div>
           <p>
-            <span className={s.title}>{props.full_name}</span>
-            <span className={s.subTitle}>{props.biography}</span>
+            <span className={s.title}>{props.full_name ? props.full_name : 'Бижутерия♟Айтемы♟Стиль'}</span>
+            <span className={s.subTitle}>{props.biography.slice(0, 45) + '...'}</span>
           </p>
         </div>
       </div>
