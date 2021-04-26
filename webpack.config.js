@@ -17,6 +17,11 @@ module.exports = {
       src: path.resolve(__dirname, 'src/')
     }
   },
+  node: {
+    fs: 'empty',
+    tls: 'empty',
+    net: 'empty',
+  },
   devtool: 'source-map',
   output: {
     filename: 'main.js',

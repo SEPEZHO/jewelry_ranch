@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             </span>
           </div>
           <span>
-            А вот и мой <a href="https://sepezho.com">сайт</a>. Переходи по ссылкам, пиши. Всегда рад новым знакомствам :)
+            А вот и мой <a href="https://sepezho.com">сайт</a>. Заходи, пиши. Всегда рад новым знакомствам :)
           </span>
         </div>
         <span>

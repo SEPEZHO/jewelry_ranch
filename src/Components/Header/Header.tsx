@@ -14,8 +14,14 @@ const Header: React.FC = (props) => {
             {props.profile_pic_url ? <div><img src={props.profile_pic_url} className={`${s.avatar} rotateItem`} alt="" /></div> : <img src={Waiting} className={s.waiting} alt="" />}
           </div>
           <p>
-            <span className={s.title}>{props.full_name ? props.full_name : 'Бижутерия♟Айтемы♟Стиль'}</span>
-            <span className={s.subTitle}>{props.biography.slice(0, 45) + '...'}</span>
+            <span className={s.title}>
+              JUST_JEWELRY_KRD
+              {/* {props.full_name ? props.full_name : 'Бижутерия♟Айтемы♟Стиль'} */}
+            </span>
+            <span className={s.subTitle}>
+              🔥 Качественные айтемы...
+              {/* {props.biography.slice(0, 45) + '...'} */}
+            </span>
           </p>
         </div>
       </div>
@@ -25,9 +31,9 @@ const Header: React.FC = (props) => {
 
 const UpdateCatch = (state) => {
   return {
-    biography: state.imgs.graphql.user.biography,
+    // biography: state.imgs.graphql.user.biography,
     profile_pic_url: state.imgs.graphql.user.profile_pic_url,
-    full_name: state.imgs.graphql.user.full_name,
+    // full_name: state.imgs.graphql.user.full_name,
   };
 };
 

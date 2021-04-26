@@ -13,6 +13,7 @@ import useResponsive from 'src/Logics/responsive'
 import s from './Style/Slider.module.sass';
 
 const SliderModule: React.FC = (props) => {
+
   const settings = {
     dots: true,
     arrows: false,
@@ -22,12 +23,11 @@ const SliderModule: React.FC = (props) => {
     autoplay: true,
     autoplaySpeed: 7000,
   };
-
   const FilledSlider = (props) => {
-    if (props.imgs.edge_owner_to_timeline_media) {
+    if (props.imgs[0]) {
       return (
         <Slider className={s.SliderContainer} {...settings}>
-          {props.imgs.edge_owner_to_timeline_media.edges.map((e) => e.node).slice(0, 10).map((img) => (
+          {props.imgs.slice(0, 10).map((e) => e.node).map((img) => (
             <div key={img.id} className={s.Slide}>
               <img src={img.thumbnail_resources[4].src} className={s.Slider_img} alt="" />
               <div>
@@ -68,11 +68,15 @@ const SliderModule: React.FC = (props) => {
       </Slider>
     );
   };
+  // console.log('-----------')
+  // console.log(props)
+  // console.log('-----------')
+
   return (
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>
         {/* {props.imgs.username.toUpperCase()} */}
-        JUST_JEWELRY_KRD
+        WITHLOVE
       </div>
 
       {useResponsive('(min-width: 950px)', true) ? <Tilt children={<FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />} /> : <FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />}
@@ -93,7 +97,7 @@ const SliderModule: React.FC = (props) => {
 
 const UpdateImgsCatch = (state) => {
   return {
-    imgs: state.imgs.graphql.user,
+    imgs: state.imgs,
   };
 };
 
